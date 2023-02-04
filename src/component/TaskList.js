@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './TaskList.css';
 
 const Tasklist = ({todos,onChangeTodo, onDeleteTodo}) => {
 
@@ -6,7 +7,7 @@ const Tasklist = ({todos,onChangeTodo, onDeleteTodo}) => {
          <>
             {todos.map(todo => (
             //  <li key={todo.id}>
-                <Task 
+                <Task
                 todo={todo}
                 onChange={onChangeTodo}
                 onDelete={onDeleteTodo}
@@ -34,7 +35,7 @@ const Task = ({ todo, onChange, onDelete }) => {
                     });
                 }}
               />
-                <button onClick={() => setIsEditing(false)}>
+                <button className='addTodo' onClick={() => setIsEditing(false)}>
                   save
                 </button>
             </>
